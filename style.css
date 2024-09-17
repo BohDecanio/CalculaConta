@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    /* display: flex;
+    flex: auto; */
+}
+
+.quality-card {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.quality-card:hover {
+    transform: scale(1.05);
+}
+
+/* Correção para o tamanho das imagens */
+.card-img-top {
+    width: 30%; /* Assegura que a imagem ocupe toda a largura do card */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 200px; /* Define um tamanho máximo */
+    margin: 0 auto; /* Centraliza a imagem dentro do card */
+    display: block; /* Garante que o ajuste de margem funcione */
+}
+
+@media (max-width: 768px) {
+    .quality-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* tentar remover o fixed para corrigir apresentação de resultado de conta por pessoa. que está por tras do footer. */
+footer { 
+    padding: 20px;
+    background-color: #f8f9fa;
+    bottom: 0;
+    width: 100%;
+}
+
+#mainForm {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    #mainForm {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho com os Cards de Qualidade -->
+    <header class="container mt-5">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card quality-card" id="otimo">
+                    <img src="assets/img/img_qualific_like_S_fundo-removebg-preview.png" class="card-img-top" alt="Ótimo Atendimento">
+                    <div class="card-body">
+                        <h5 class="card-title">Atendimento Ótimo</h5>
+                        <p class="card-text">Clique aqui para avaliar como ótimo e calcular a conta com 10% de gorjeta.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card quality-card" id="bom">
+                    <img src="assets/img/img_qualific_halfLike_S_fundo-removebg-preview.png" class="card-img-top" alt="Bom Atendimento">
+                    <div class="card-body">
+                        <h5 class="card-title">Bom Atendimento</h5>
+                        <p class="card-text">Clique aqui para avaliar como bom e calcular a conta com 5% de gorjeta.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card quality-card" id="regular">
+                    <img src="assets/img/img_qualific_Dislike_S_fundo-removebg-preview.png" class="card-img-top" alt="Atendimento Regular">
+                    <div class="card-body">
+                        <h5 class="card-title">Atendimento Regular</h5>
+                        <p class="card-text">Clique aqui para avaliar como regular e calcular a conta sem gorjeta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section - Formulário para Cálculo da Conta -->
+    <main class="container mt-5 d-none" id="mainForm">
+        <h2>Calcular Conta</h2>
+        <form id="billForm">
+            <div class="mb-3">
+                <label for="totalBill" class="form-label">Valor Total da Conta</label>
+                <input type="number" class="form-control" id="totalBill" placeholder="Digite o valor total da conta: " required>
+            </div>
+            <div class="mb-3">
+                <label for="numPeople" class="form-label">Número de Pessoas</label>
+                <input type="number" class="form-control" id="numPeople" placeholder="Digite o número de pessoas para dividir a conta: " required>
+            </div>
+            <div class="mb-3">
+                <label for="tipPercentage" class="form-label">Comissão</label>
+                <input type="text" class="form-control" id="tipPercentage" readonly>
+            </div>
+            <button type="submit" class="btn btn-primary">Calcular</button>
+        </form>
+
+        <!-- Resultados do Cálculo -->
+        <div class="mt-4" id="result" style="display: none;">
+            <h3>Resultado</h3>
+            <p><strong>Valor Total com Comissão:</strong> <span id="totalWithTip"></span></p>
+            <p><strong>Valor por Pessoa:</strong> <span id="amountPerPerson"></span></p>
+        </div>
+    </main>
+
+    <footer class="text-center mt-5">
+        <p>Direitos reservados Ítalo Decanio 2024. Co-participações: Remove.bg; Gpt.inho; Bootstrap.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
